@@ -45,26 +45,25 @@
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents" id=""></div>
-                <div class="tab-content active-tab">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>Software Dev</span><br>Designing Softwares</li>
                         <li><span>Web Dev</span><br>Designing Web App</li>
                         <li><span>App Dev</span><br>Building Android/iOS</li>
                     </ul>
                 </div>
-                <div class="tab-content">
+                <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>2022 - Current</span><br>Software Engineer at Spike Web Service</li>
                         <li><span>2021 - 2022</span><br>Graphics Designer at SCITA</li>
                         <li><span>2019 - 2020</span><br>IT Analyst at Macky Digital Fleets Company</li>
-                        <li><span>2018 - 2019</span><br>Intern IT Infrastructure Support at Exxon Mobil EMIT Nigeria</li>
+                        <li><span>2018 - 2019</span><br>Intern IT Infrastructure Support at Exxon Mobil <br>EMIT Nigeria</li>
                     </ul>
                 </div>
-                <div class="tab-content">
+                <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2023</span><br>Software Engineering Certificate at ALX Africa</li>
-                        <li><span>2020</span><br>A-leve Science/Mathematics Joint Unitary Parliametry Examination Board Ilorin</li>
+                        <li><span>2020</span><br>A-leve Science/Mathematics Joint Unitary Parliametry <br>Examination Board Ilorin</li>
                         <li><span>2017</span><br>HND Computer Science at Heritage Polytechnic Eket</li>
                     </ul>
                 </div>
@@ -75,6 +74,32 @@
     </div>
    </div>
 </div>
+<!-- ------------services------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            
+        </div>
+    </div>
 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
